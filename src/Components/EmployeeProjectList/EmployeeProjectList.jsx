@@ -12,7 +12,12 @@ import Notifications from "../NotificationDrawer/Notification";
 
 function EmployeeProjectList() {
   const dispatch = useDispatch();
+
   const [showPopup, setShowPopup] = useState(false);
+  const [taskname,setTaskname] = useState("");
+  const [description,setDescription] = useState("");
+  const [priority,setPriority] = useState("");
+  const [member,setMember] = useState("");
   const [showNotification,setNotification] = useState(false);
   const user = useSelector((state) => state.users.currentUser);
   const { projects, status, error } = useSelector((state) => state.projects);
@@ -58,40 +63,32 @@ function EmployeeProjectList() {
         </button>
       </div>
 
-      {/* <table className="employee-custom-table">
-        <thead>
-          <tr>
-            <th className="employee-left">Project Name</th>
-            <th className="employee-left">Status</th>
-            <th className="employee-right">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="employee-left">Lulu International</td>
-            <td className="employee-status-red">Not completed</td>
-            <td className="employee-right"><Link to='/employeedashboard/task-detail' className="Link" >Viewtasks</Link></td>
-          </tr>
-          <tr>
-            <td className="employee-left">IKEA</td>
-            <td className="employee-status-green">Completed</td>
-            <td className="employee-right"><Link to='/employeedashboard/task-detail' className="Link" >Viewtasks</Link></td>
-          </tr>
-          <tr>
-            <td className="employee-left">Lulu International</td>
-            <td className="employee-status-red">Not completed</td>
-            <td className="employee-right"><Link to='/employeedashboard/task-detail' className="Link" >Viewtasks</Link></td>
-          </tr>
-          <tr>
-            <td className="employee-left">Lulu International</td>
-            <td className="employee-status-red">Not completed</td>
-            <td className="employee-right"><Link to='/employeedashboard/task-detail' className="Link" >Viewtasks</Link></td>
-          </tr>
-        </tbody>
-      </table> */}
-  {projectsForMember.map((item)=>(<div>
-<h1>{item.project_name}</h1>
-  </div>))}
+      <table className="employee-custom-table">
+  <thead>
+    <tr>
+      <th className="employee-left">Project Name</th>
+      <th className="employee-left">Status</th>
+      <th className="employee-right">Action</th>
+      <th className="employee-right">Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    {projectsForMember.map((item) => (
+      <tr key={item.id}>
+        <td className="employee-left">{item.project_name}</td>
+        <td className="employee-status-red">Not completed</td>
+        <td className="employee-right">
+          <Link to="/employeedashboard/task-detail" className="Link">
+            View Tasks
+          </Link>
+        </td>
+        <td className="employee-left"><AddTaskForm project={item}/></td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+ 
       {showPopup && (
         <div className="employee-popup-container">
           <div className="employee-popup-overlay" onClick={handlePopupClose} />

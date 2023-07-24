@@ -12,11 +12,16 @@ export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async () => {
   const response = await axios.get('http://localhost:8000/tasks');
   return response.data;
 });
-
+export const addNewTask = createAsyncThunk('projects/addNewTask', async (projectData) => {
+  const response = await axios.post(`http://localhost:8000/projects/${projectId}/`, projectData);
+  return response.data;
+});
 const tasksSlice = createSlice({
   name: 'tasks',
   initialState,
-  reducers: {},
+  reducers: {
+    
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchTasks.pending, (state) => {
