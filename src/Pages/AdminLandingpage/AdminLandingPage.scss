@@ -1,0 +1,115 @@
+.adminlandingpage {
+  padding-top: 10px;
+  width: 80%;
+
+  .topsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search-input {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 8px;
+      width: 450px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: transparent;
+      }
+
+      i {
+        font-size: 20px;
+        margin-right: 1px;
+        color: #059b9a;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .analtyics-cards {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-between;
+
+    .card {
+      .card-content {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        color: #059b9a;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: translateY(-5px);
+          color: white;
+          background: linear-gradient(
+            90deg,
+            rgba(0, 150, 136, 1) 0%,
+            rgba(0, 188, 212, 1) 100%
+          );
+        }
+
+        .card-content1 {
+          margin-left: 2rem;
+          color: #646666;
+
+          .card-title {
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .card-description {
+            font-size: 1rem;
+          }
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .projectlisting {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Responsive styles
+  @media screen and (max-width: 768px) {
+    .analtyics-cards {
+      flex-direction: column;
+
+      .card {
+        margin-bottom: 20px;
+        width: 100%;
+
+        .card-content {
+          justify-content: space-between;
+        }
+      }
+    }
+    .projectlisting{
+      width: 60%;
+    }
+  }
+}

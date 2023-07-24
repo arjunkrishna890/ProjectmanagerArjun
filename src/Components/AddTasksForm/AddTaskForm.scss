@@ -1,0 +1,91 @@
+.Add-TaskForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+    .form-heading {
+        font-size: 29px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #059b9a;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+      width: 100%;
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 300;
+        font-size: 18px;
+     
+      }
+  
+      input[type="text"]{
+        width: 92%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          outline: none;
+          border-color:  #059b9a;
+        }
+      }
+
+      textarea{
+        width: 92%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          outline: none;
+          border-color:  #059b9a;
+        }
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          outline: none;
+          border-color:  #059b9a;
+        }
+      }
+  
+      textarea {
+        resize: vertical; // Allow vertical resizing of the textarea
+      }
+    }
+  
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #14acac; // Green button color
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #059b9a; // Darker green color on hover
+      }
+    }
+  }
+

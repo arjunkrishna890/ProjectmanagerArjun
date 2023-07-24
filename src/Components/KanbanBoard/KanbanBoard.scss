@@ -1,0 +1,212 @@
+$primary:  #059b9a;
+$secondary: #38ef7d;
+.kambanboardmain{
+  padding-top: 10px;
+    width: 90%;
+  .topsection{
+    display: flex;
+    
+    align-items: center;
+    // margin-top: 2rem;
+    justify-content: space-between;
+    // .search-input {
+    //     display: flex;
+    //     align-items: center;
+    //     background-color: #fff;
+    //     border: 1px solid #ccc;
+    //     border-radius: 20px;
+    //     padding: 8px;
+    //     width: 450px;
+    //     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+    //     input {
+    //       flex: 1;
+    //       border: none;
+    //       outline: none;
+    //       padding: 5px 10px;
+    //       font-size: 16px;
+    //       background-color: transparent;
+    //     }
+      
+    //     i {
+    //       font-size: 20px;
+    //       margin-right:1px;
+    //       color: #059b9a;
+    //       margin-left: 10px;
+    //       cursor: pointer;
+    //     }
+    //   }
+
+  }
+  .kanban-board-container {
+    width: 100%;
+    height: 97vh;
+   
+   //  background-color:  #059b9a; // Light blue main background
+    display: flex;
+    justify-content: center;
+  
+    .kanban-board {
+      display: flex;
+      width: 80%;
+      justify-content: center;
+      gap: 10px;
+      background-color: transparent;
+  
+      .column {
+        width: 85%;
+        border: #e0e0e0 solid 1px;
+        background-color: #f9f9f9;
+        margin: 5px;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(61, 61, 61, 0.23);
+  
+        h3 {
+          font-size: 25px;
+          color: white;
+          width: 80%;
+        }
+  
+        .task {
+          width: 80%;
+          height: 10vh;
+          display: flex;
+          flex-direction: column;
+         justify-content: space-between;
+          align-items: center;
+          border-radius: 10px 10px 0px 0px;
+          margin: 5px 0;
+          cursor: pointer;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          background-color: #fff;
+          border-radius: 5px; // Rounded corners for tasks
+          transition: background-color 0.2s ease;
+          word-wrap: break-word; // Smooth transition on hover
+
+          .completedtaskheading{
+           background-color:#66bb6a;
+           width: 100%;
+           // font-size: 1.3rem;
+           font-weight: 600;
+           align-items: center;
+           justify-content: center;
+           display: flex;
+           text-align: center;
+           height: 3vh;
+          }
+          .inprogresstaskheading{
+           background-color:#f9a825;
+           font-weight: 600;
+           align-items: center;
+           justify-content: center;
+           display: flex;
+           width: 100%;
+           text-align: center;
+           height: 3vh;
+          }
+          .pendingtaskheading{
+           background-color:#e57373;
+           font-weight: 600;
+           align-items: center;
+           justify-content: center;
+           display: flex;
+           width: 100%;
+           text-align: center;
+           height: 3vh;
+          }
+          .low-priority{
+           width: 100%;
+           text-align: left;
+           padding-left: 10px;
+           font-size: .8rem;
+           justify-content: left;
+           align-items: center ;
+           font-weight: 500;
+           display: flex;
+           height: 20%;
+           color: #00471b;
+           background-color: transparent; /* Red color for the circle */
+          }
+          .high-priority{
+           width: 100%;
+           text-align: left;
+           padding-left: 10px;
+           font-size: .8rem;
+           justify-content: left;
+           align-items: center ;
+           font-weight: 500;
+           display: flex;
+           height: 20%;
+           color: rgb(128, 0, 0);
+           background-color: transparent; /* Red color for the circle */
+          }
+          .medium-priority{
+           width: 100%;
+           text-align: left;
+           padding-left: 10px;
+           font-size: .8rem;
+           justify-content: left;
+           align-items: center ;
+           font-weight: 500;
+           display: flex;
+           height: 20%;
+           color: rgb(1, 1, 97);
+           background-color: transparent;/* Red color for the circle */
+          }
+          
+        }
+        .heading-completed{
+           background-color:#4fb37c;
+           width: 100%;
+           align-items: center;
+           justify-content: center;
+           display: flex;
+           border-radius: 10px 10px 0px 0px;
+           text-align: center;
+        }
+        .heading-pending{
+         background-color:#fc5956;
+         width: 100%;
+         align-items: center;
+         justify-content: center;
+         display: flex;
+         border-radius: 10px 10px 0px 0px;
+         text-align: center;
+      }
+      .heading-progress{
+       background-color:#fab243;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+       display: flex;
+       border-radius: 10px 10px 0px 0px;
+       text-align: center;
+    }
+      }
+  
+      .column1 {
+        .task {
+          background-color: #ffffff; // Light peach background for Column 1
+        }
+      }
+  
+      .column2 {
+        .task {
+          background-color: #ffffff; // Light green background for Column 2
+        }
+      }
+  
+      .column3 {
+        .task {
+          background-color: #ffffff; // Light blue background for Column 3
+        }
+      }
+    }
+  }
+  
+}

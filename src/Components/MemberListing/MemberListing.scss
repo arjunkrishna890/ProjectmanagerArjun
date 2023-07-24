@@ -1,0 +1,50 @@
+.tables-container {
+    width: 30%;
+    border: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    // margin: 0 auto;
+    .list-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+ 
+        border-radius: 5px;
+      
+        .title{
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #059b9a;
+          }
+      }
+      
+      .custom-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px 0;
+          border-bottom: 1px solid #ccc;
+      
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      
+        .list-item {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      
+        .list-description {
+            font-size: 0.8rem;
+          color: #666;
+        }
+      }
+      
+  }

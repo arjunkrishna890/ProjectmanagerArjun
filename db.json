@@ -1,0 +1,164 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "is_admin": true
+    },
+    {
+      "id": 2,
+      "username": "hrithik",
+      "password": "hrithik",
+      "is_admin": false
+    },
+    {
+      "id": 3,
+      "username": "arjun",
+      "password": "arjun",
+      "is_admin": false
+    },
+    {
+      "id": 4,
+      "username": "febin",
+      "password": "febin",
+      "is_admin": false
+    },
+    {
+      "id": 5,
+      "username": "angel",
+      "password": "angel",
+      "is_admin": false
+    },
+    {
+      "id": 6,
+      "username": "alen",
+      "password": "alen"
+    },
+    {
+      "id": 7,
+      "username": "abin",
+      "password": "abin"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "project_name": "Wac pro",
+      "teamLead": 2,
+      "members": [
+        3,
+        4,
+        5
+      ],
+      "description": "Promange toool",
+      "deadline": "2023-08-25",
+      "instructions": "",
+      "tasks": [
+        {
+          "id": 1,
+          "task_name": "Task 1",
+          "assigned_member_id": 3,
+          "description": "Task 1 description",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "project_name": "New Project",
+      "teamLead": 3,
+      "members": [
+        4,
+        5
+      ],
+      "description": "Sample Project Description",
+      "deadline": "2023-09-30",
+      "instructions": "",
+      "tasks": [
+        {
+          "id": 1,
+          "task_name": "Task 1",
+          "assigned_member_id": 4,
+          "description": "Task 1 description",
+          "priority": "Medium"
+        },
+        {
+          "id": 2,
+          "task_name": "Task 2",
+          "assigned_member_id": 5,
+          "description": "Task 2 description",
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "project_name": "Important Project",
+      "teamLead": 5,
+      "members": [
+        3,
+        6
+      ],
+      "description": "This project is crucial for the company",
+      "deadline": "2023-10-15",
+      "instructions": "",
+      "tasks": [
+        {
+          "id": 1,
+          "task_name": "Task 1",
+          "assigned_member_id": 3,
+          "description": "Task 1 description",
+          "priority": "High"
+        },
+        {
+          "id": 2,
+          "task_name": "Task 2",
+          "assigned_member_id": 6,
+          "description": "Task 2 description",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "project_name": "Mobile App Development",
+      "teamLead": 6,
+      "members": [
+        2,
+        7
+      ],
+      "description": "Creating a mobile app for the company",
+      "deadline": "2023-11-20",
+      "instructions": "",
+      "tasks": [
+        {
+          "id": 1,
+          "task_name": "Task 1",
+          "assigned_member_id": 2,
+          "description": "Task 1 description",
+          "priority": "Medium"
+        },
+        {
+          "id": 2,
+          "task_name": "Task 2",
+          "assigned_member_id": 7,
+          "description": "Task 2 description",
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "project_name": "LULU",
+      "teamLead": "2",
+      "members": [
+        "3",
+        "5",
+        "6"
+      ],
+      "description": "",
+      "deadline": "2023-07-20",
+      "id": 5
+    }
+  ]
+}

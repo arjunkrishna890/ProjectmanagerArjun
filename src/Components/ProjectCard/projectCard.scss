@@ -1,0 +1,133 @@
+$primary:  #059b9a;
+$secondary: #38ef7d;
+.projectcontainer{
+  padding-top: 10px;
+  width: 80%;
+  // margin: 5rem;
+  .topsection{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .projectdetails{
+      width: 40%;
+      border: 0;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 10px;
+      padding: 20px;
+      h2{
+        color:  #059b9a;
+      }
+      p{
+        color: black;
+      }
+      .percentage{
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: flex;
+        h1{
+          font-size: 8rem;
+          color:  linear-gradient(to right, $primary, $secondary);
+        }
+        
+      }
+     
+    }
+    .teamdetail{
+      width: 50%;
+      border: 0;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 10px;
+      padding: 20px;
+      h4{
+        color:  #059b9a;
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        li{
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          border-bottom: 1px solid #ccc;
+        }
+      }
+      h3{
+        color:  #059b9a;
+      }
+      textarea{
+        width: 98%;
+        height: 150px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.5;
+      
+        /* Additional custom styles */
+        background-color: #f7f7f7;
+        color: #333;
+      
+        /* Placeholder styles */
+        &::placeholder {
+          color: #999;
+        }
+      
+        /* Hover and focus styles */
+        &:hover,
+        &:focus {
+          border-color: #059b9a;
+          outline: none;
+        }
+      }
+    }
+
+  }
+  .bottomsection {
+    width: 100%;
+    margin-top: 2rem;
+    border: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+   
+    .Description{
+      width: 99%;
+      h3{
+        color:  #059b9a;
+      }
+      textarea{
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.5;
+      
+        /* Additional custom styles */
+        background-color: #f7f7f7;
+        color: #333;
+      
+        /* Placeholder styles */
+        &::placeholder {
+          color: #999;
+        }
+      
+        /* Hover and focus styles */
+        &:hover,
+        &:focus {
+          border-color: #059b9a;
+          outline: none;
+        }
+      }
+    }
+  }  
+}

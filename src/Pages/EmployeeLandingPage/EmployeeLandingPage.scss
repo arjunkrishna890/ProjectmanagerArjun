@@ -1,0 +1,14 @@
+.employee-landing-main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+     .employee-sidebar{
+        width: 10% ;
+     }
+
+     .employee-content{
+        margin-left: 10rem;
+        margin-top: 5rem;
+        width: 80%;
+     }
+}
