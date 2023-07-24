@@ -25,7 +25,7 @@ function App() {
         </Route>
         <Route exact path='/EmployeeDashboard' element={<EmployeeLandingPage/>} >
           <Route index element={<EmployeeProjectList/>}></Route>
-          <Route path="task-detail" element={<KanbanBoard />} />
+          <Route path="task-detail/:id" element={<KanbanBoard />} />
           <Route  path='teamchat' element={<TeamInstructionAndDiscussions/>} />
         </Route>
         

@@ -78,9 +78,10 @@ function EmployeeProjectList() {
         <td className="employee-left">{item.project_name}</td>
         <td className="employee-status-red">Not completed</td>
         <td className="employee-right">
-          <Link to="/employeedashboard/task-detail" className="Link">
-            View Tasks
-          </Link>
+        <Link to={`/employeedashboard/task-detail/${item.id}`} className="Link">
+       View Tasks
+      </Link>
+
         </td>
         <td className="employee-left"><AddTaskForm project={item}/></td>
       </tr>

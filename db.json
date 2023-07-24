@@ -65,6 +65,26 @@
       "description": "adwad",
       "deadline": "2023-07-01",
       "id": 2
+    },
+    {
+      "project_name": "NEW project",
+      "teamLead": "",
+      "members": [
+        "5"
+      ],
+      "description": "fwe",
+      "deadline": "2023-07-28",
+      "id": 3
+    },
+    {
+      "project_name": "Scene",
+      "teamLead": "6",
+      "members": [
+        "5"
+      ],
+      "description": "erger",
+      "deadline": "2023-07-20",
+      "id": 4
     }
   ],
   "tasks": [
@@ -99,6 +119,46 @@
       "assigned_member_id": 4,
       "project_id": 2,
       "id": 4
+    },
+    {
+      "task_name": "TASK1",
+      "description": "The name of this is to bring",
+      "priority": "Medium",
+      "assigned_member_id": 5,
+      "project_id": 3,
+      "id": 5
+    },
+    {
+      "task_name": "TASK1",
+      "description": "name",
+      "priority": "Medium",
+      "assigned_member_id": 5,
+      "project_id": 3,
+      "id": 6
+    },
+    {
+      "task_name": "qwde",
+      "description": "qwd",
+      "priority": "Low",
+      "assigned_member_id": 3,
+      "project_id": 1,
+      "id": 7
+    },
+    {
+      "task_name": "jumm",
+      "description": "ddd",
+      "priority": "Medium",
+      "assigned_member_id": 3,
+      "project_id": 1,
+      "id": 8
+    },
+    {
+      "task_name": "1",
+      "description": "1",
+      "priority": "Medium",
+      "assigned_member_id": 5,
+      "project_id": 4,
+      "id": 9
     }
   ]
 }

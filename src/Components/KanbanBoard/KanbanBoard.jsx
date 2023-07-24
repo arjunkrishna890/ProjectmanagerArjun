@@ -1,37 +1,49 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 
 import "./KanbanBoard.scss";
 import {FcHighPriority,FcLowPriority,FcMediumPriority} from 'react-icons/fc'
 import { MdOutlineNotifications } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useParams } from "react-router";
+import { fetchTasksByProjectId } from "../../Store/tasksSlice";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 
 const KanbanBoard = () => {
-  const [tasks, setTasks] = useState([
-    { id: 1,heading:"headingone" ,title: "Task1", status: "pending" ,priority:"High" },
-    { id: 2,heading:"Footer", title: "The footer of the IKEA project", status: "pending",priority:"Medium" },
-    { id: 3,heading:"Header ", title: "The header of the Lulu project", status: "pending",priority:"Low" },
-    { id: 4,heading:"Footer", title: "The footer of the IKEA project", status: "completed",priority:"Medium" },
-    { id: 5,heading:"Header ", title: "The header of the Lulu project", status: "pending",priority:"Low" },
-  ]);
+  // const [tasked, setTasks] = useState([
+  //   { id: 1,heading:"headingone" ,title: "Task1", status: "pending" ,priority:"High" },
+  //   { id: 2,heading:"Footer", title: "The footer of the IKEA project", status: "pending",priority:"Medium" },
+  //   { id: 3,heading:"Header ", title: "The header of the Lulu project", status: "pending",priority:"Low" },
+  //   { id: 4,heading:"Footer", title: "The footer of the IKEA project", status: "completed",priority:"Medium" },
+  //   { id: 5,heading:"Header ", title: "The header of the Lulu project", status: "pending",priority:"Low" },
+  // ]);
+  const {id} = useParams();
+  console.log("The project id is ",id)
+  const dispatch = useDispatch();
   const [itemId,setItemId] =useState();
 
-  const handleDrop = (e, status) => {
-    e.preventDefault();
-    console.log(status,itemId );
-    const taskId = e.dataTransfer.getData("text");
-    const updatedTasks = tasks.map((task) =>
-      task.id.toString() === taskId ? { ...task, status } : task
-    );
-    setTasks(updatedTasks);
-  };
+  // const handleDrop = (e, status) => {
+  //   e.preventDefault();
+  //   console.log(status,itemId );
+  //   const taskId = e.dataTransfer.getData("text");
+  //   const updatedTasks = tasks.map((task) =>
+  //     task.id.toString() === taskId ? { ...task, status } : task
+  //   );
+  //   setTasks(updatedTasks);
+  // };
 
-  const handleDragStart = (e, id) => {
-    e.dataTransfer.setData("text", id);
-    setItemId(id);
-  };
+  // const handleDragStart = (e, id) => {
+  //   e.dataTransfer.setData("text", id);
+  //   setItemId(id);
+  // };
   const users = useSelector((state) => state.users.currentUser);
-  console.log(users)
+  console.log("The user id :",users.id);
+  useEffect(() => {
+    dispatch(fetchTasksByProjectId(id));
+  }, [dispatch]);
+
+  const tasks = useSelector((state) => state.tasks.tasks);
+  console.log(tasks);
   return (
     <div className="kambanboardmain">
       <div className="topsection">
